@@ -1,33 +1,42 @@
+import java.util.List;
+
 public class Restaurant {
     private String id;
     private String name;
     private String description;
     private String address;
-    private String zipCode;
-    private String region;
-    private String town;
-    private String tel;
-    private double pointX;
-    private double pointY;
-    private int rstClass;
+    private String city;
+    private String county;
+    private String phone;
+    private List<String> openHours;
+    private String imageUrl;
+    private String owner;
+    private String classType;
+    private double longitude;
+    private double latitude;
+    private String classDesc;
+    private int index;
 
-    // Constructor to initialize all member variables
-    public Restaurant(String id, String name, String description, String address, String zipCode,
-                      String region, String town, String tel, double pointX, double pointY, int rstClass) {
+    public Restaurant(String id, String name, String description, String address, String city, String county,
+                      String phone, List<String> openHours, String imageUrl, String owner, String classType,
+                      double longitude, double latitude, String classDesc, int index) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.address = address;
-        this.zipCode = zipCode;
-        this.region = region;
-        this.town = town;
-        this.tel = tel;
-        this.pointX = pointX;
-        this.pointY = pointY;
-        this.rstClass = rstClass;
+        this.city = city;
+        this.county = county;
+        this.phone = phone;
+        this.openHours = openHours;
+        this.imageUrl = imageUrl;
+        this.owner = owner;
+        this.classType = classType;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.classDesc = classDesc;
+        this.index = index;
     }
 
-    // Getter methods for all member variables
     public String getId() {
         return id;
     }
@@ -44,31 +53,68 @@ public class Restaurant {
         return address;
     }
 
-    public String getZipCode() {
-        return zipCode;
+    public String getCity() {
+        return city;
     }
 
-    public String getRegion() {
-        return region;
+    public String getCounty() {
+        return county;
     }
 
-    public String getTown() {
-        return town;
+    public String getPhone() {
+        return phone;
     }
 
-    public String getTel() {
-        return tel;
+    public List<String> getOpenHours() {
+        return openHours;
     }
 
-    public double getPointX() {
-        return pointX;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public double getPointY() {
-        return pointY;
+    public String getOwner() {
+        return owner;
     }
 
-    public int getRstClass() {
-        return rstClass;
+    public String getClassType() {
+        return classType;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public String getClassDesc() {
+        return classDesc;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", county='" + county + '\'' +
+                ", phone='" + phone + '\'' +
+                ", openHours=" + openHours +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", owner='" + owner + '\'' +
+                ", classType='" + classType + '\'' +
+                ", longitude=" + longitude +
+                ", latitude=" + latitude +
+                ", classDesc='" + classDesc + '\'' +
+                ", index=" + index +
+                '}';
     }
 }

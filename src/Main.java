@@ -4,22 +4,22 @@ import java.net.URL;
 public class Main {
     public static void main(String[] args) {
         try {
-            // Download the restaurant information CSV file
+            // 下載餐廳信息的 CSV 文件
             String url = "https://media.taiwan.net.tw/XMLReleaseALL_public/Restaurant_C_f.csv";
             String fileName = "Restaurant_C_f.csv";
             downloadFile(url, fileName);
 
-            // Create a RestaurantMap object
+            // 創建 RestaurantMap 對象
             RestaurantMap restaurantMap = new RestaurantMap();
 
-            // Load data from CSV file
+            // 從 CSV 文件加載數據
             restaurantMap.load(fileName);
 
-            // Save data to CSV files for each region (example)
+            // 將數據保存到各地區的 CSV 文件中（示例）
             restaurantMap.save("臺中市");
 
-            // Print nearest restaurants
-            double targetPointX = 120.649539; // Example coordinates (逢甲大學)
+            // 打印最近的餐廳
+            double targetPointX = 120.649539; // 逢甲大學的坐標
             double targetPointY = 24.179335;
             restaurantMap.printNearestRestaurants("臺中市", targetPointX, targetPointY);
 
